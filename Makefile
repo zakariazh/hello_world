@@ -6,7 +6,7 @@ OBJ = hello
 all: $(OBJ)
 
 $(OBJ): $(SRC)
-	$(CC) $(CFLAGS) $(SRC) -o $(OBJ)
+	$(CC) $(CFLAGS) $(SRC) -o $(OBJ) $(LDFLAGS)
 
 install: $(OBJ)
 	install -d $(DESTDIR)
