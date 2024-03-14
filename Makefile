@@ -8,6 +8,10 @@ all: $(OBJ)
 $(OBJ): $(SRC)
 	$(CC) $(CFLAGS) $(SRC) -o $(OBJ)
 
+install: $(OBJ)
+	install -d $(DESTDIR)
+	install -m 0755 $(OBJ) $(DESTDIR)
+
 clean:
 	rm -f $(OBJ)
 
